@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo DOM</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+            color: rgb(255, 202, 28);
+            background-color: rgb(37, 104, 171);
+        }
+        h1 {
+            font: normal 30pt Arial;
+            color: rgb(0, 0, 0)
+        }
+        p1 {
+            font: normal 20pt Arial;
+            color: white
+        }
+        div {
+            width: 250px;
+            height: 100px;
+            background-color: red;
+            color: rgb(255, 202, 28);
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1><strong>Iniciando Estudos de DOM</strong></h1>
+    <p1>Entendendo o que é DOM<br/></p1>
+    <p1>Manipulando o <strong>DOM</strong> em Java Script!<br/><br/></p1>
+    <div Id='mensagem'>Clique em mim!</div>
+    <p1><br/>Isso ai! Clique em mim!<br/></p1>
+    <p1>Vai lá! Qual o problema?</p1>
+    <script>
+        var corpo = window.document.body
+        corpo.style.background = 'gray'
+        var p1 = window.document.getElementsByTagName('p1')[0]
+        /*
+        p1.style.color = 'red'
+        window.document.write('<br/> Está escrito assim: ' + p1.innerHTML)
+        var Id = window.document.getElementById('mensagem')
+        Id.style.background = 'green'
+        Id.innerText = 'Estou Aguardando...'
+        */
+        var Id = window.document.querySelector('div#mensagem')
+        Id.style.background = 'green'
+    </script>
+</body>
+</html>

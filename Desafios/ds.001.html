@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileiro ou Estrangeiro</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: whitesmoke;
+        }
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+        input {
+            padding: 5px;
+            margin: 5px;
+            border-radius: 5px;
+            border: 1px solid blue;
+        }
+        input#txtpais {
+            width: 200px;
+        }
+        input#btnverificar {
+            width: 100px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        div#resultado {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: whitesmoke;
+            border: 1px solid blue;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sitema de Verificação de Nacionalidade</h1>
+    Digite o seu país de origem: <input type="text" name="txtpais" id="txtpais" placeholder="Digite seu país aqui"> 
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="resultado"><p>Seu país de origem é <strong>...</strong></p></div>
+
+    <script>
+        function verificar() {
+            var txtp = window.document.querySelector('input#txtpais')
+            var res = window.document.querySelector('div#resultado')
+            var pais = String(txtp.value)
+            res.innerHTML = `<p>Seu país de origem é <strong>${pais}<strong></p>`
+            if (pais == 'Brasil') {
+                resultado.innerHTML += `<p>Você é <strong>Brasileiro!</strong></p>`
+                resultado.innerHTML += `<p>Você está em casa!</p>`
+            }else {
+                resultado.innerHTML += `<p>Você é <strong>Estrangeiro!</strong></p>`
+                resultado.innerHTML += `<p>Seja Bem-Vindo ao Brasil!</p>`
+            }
+        }
+    </script>
+</body>
+</html>

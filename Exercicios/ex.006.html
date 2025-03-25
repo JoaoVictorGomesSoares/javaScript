@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão Interativo</title>
+    <style>
+        div#area {
+            width: 200px;
+            height: 100px;
+            background-color: green;
+            color: white;
+            line-height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        clique aqui!
+    </div>
+
+    <script>
+        var area = window.document.getElementById('area');
+        area.addEventListener('click', clicar);
+        area.addEventListener('mouseenter', entrar);
+        area.addEventListener('mouseout', sair);
+
+        function clicar() {
+            area.innerText = 'Clicou!';
+            area.style.backgroundColor = 'red';
+        }
+        function entrar() {
+            area.innerText = 'Entrou!';
+        }
+        function sair() {
+            area.innerText = 'Saiu!';
+            area.style.backgroundColor = 'green';
+        }
+    </script>
+</body>
+</html>
+
+<!--
+mouseenter = quando o mouse entra na DIV
+mouseout = quando o mouse sai da DIV
+mousedown = quando o mouse clica na DIV
+mouseup = quando o mouse solta o clique na DIV
+click = quando o mouse clica e solta na DIV
+mousemove = quando o mouse se move dentro da DIV
+-->
